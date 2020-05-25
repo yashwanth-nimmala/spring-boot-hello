@@ -5,11 +5,17 @@ pipeline{
     }
     stages {
         stage('git checkout'){
+            when {
+			    expression { params.action == 'create' }
+		    }
             steps{
                 git 'https://github.com/Naresh240/spring-boot-hello.git'
             }
         }
         stage('Build CI Job'){
+            when {
+			    expression { params.action == 'create' }
+		    }
             steps{
                 build 'spring-boot-hello-CI'
             }
