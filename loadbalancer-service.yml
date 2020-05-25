@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: spring-boot-hello
+  name: spring-boot-hello-loadbalancer
 spec:
   type: LoadBalancer
   selector:
@@ -11,3 +11,4 @@ spec:
       protocol: TCP
       # ELB's port
       port: 8080
+      targetPort: 8080
