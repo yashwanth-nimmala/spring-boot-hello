@@ -14,5 +14,4 @@ spec:
     spec:
       containers:
         - name: spring-cloud-discovery
-          image: naresh240/spring-boot-hello
-          tag: ${imageTag}
+          image: "{{ image_id }}"
