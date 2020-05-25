@@ -15,6 +15,5 @@ spec:
       containers:
         - name: spring-cloud-discovery
           images:
-          default:
             image: naresh240/spring-boot-hello
             tag: ${imageTag}
